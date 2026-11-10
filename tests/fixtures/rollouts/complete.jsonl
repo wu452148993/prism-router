@@ -1,0 +1,4 @@
+{"timestamp":"2026-05-18T02:16:39.826Z","type":"session_meta","payload":{"id":"019e38de-f488-7dd0-affd-087f748888f8","timestamp":"2026-05-18T02:16:36.232Z","cwd":"e:\\test","originator":"codex_exec","cli_version":"0.130.0"}}
+{"timestamp":"2026-05-18T02:16:39.827Z","type":"event_msg","payload":{"type":"task_started","turn_id":"019e38de-f4df-79e1-b07f-e48c1b3bb103","started_at":1779070596,"model_context_window":258400}}
+{"timestamp":"2026-05-18T02:24:37.085Z","type":"event_msg","payload":{"type":"token_count","input":1234,"output":5678}}
+{"timestamp":"2026-05-18T02:24:37.086Z","type":"event_msg","payload":{"type":"task_complete","turn_id":"019e38de-f4df-79e1-b07f-e48c1b3bb103","last_agent_message":"**Critical Findings**\n1. [BLOCKER] foo\n2. [WARN] bar\n\nVerdict: NO-GO"}}

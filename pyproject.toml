@@ -1,0 +1,38 @@
+[project]
+name = "prism-router"
+version = "0.1.0"
+description = "MCP wrapper for codex/gemini CLIs — v1 P0: structured error envelope, stdin PROMPT pipe, event-type whitelist parser"
+readme = "docs/README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "wulf" }]
+dependencies = [
+    "fastmcp>=3.2,<4",
+    "anyio>=4",  # request-scoped task group for the liveness progress egress
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+]
+
+[project.scripts]
+prism-router = "prism_router.server:main"
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/prism_router"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "integration: real codex/gemini CLI required; local-only, not CI (M2 §3.3)",
+    "fixtures: replay mcp-audit fixtures.json regression set (M4 §5.1)",
+]
+# Default run excludes integration + fixtures markers.
+addopts = "-m 'not integration and not fixtures'"

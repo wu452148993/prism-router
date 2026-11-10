@@ -1,0 +1,32 @@
+# Local tooling / IDE
+.ace-tool/
+.idea/
+
+# User MCP config (contains API keys — never commit)
+# `.mcp.json*` covers any local backup (e.g., `.mcp.json.backup`); the
+# canonical M4 cutover puts the backup outside the repo, but the wildcard is
+# a belt-and-suspenders guard against accidental staging.
+.mcp.json
+.mcp.json.*
+
+# MSYS2 / Cygwin crash dumps
+*.stackdump
+
+# Project-level Claude/Gemini config is tracked; user-local overrides are not
+.claude/settings.local.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS
+.DS_Store
+Thumbs.db

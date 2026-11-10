@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "deny": ["WebFetch", "WebSearch"],
+    "allow": [
+      "mcp__codex",
+      "mcp__deepwiki",
+      "mcp__gemini",
+      "mcp__exa",
+      "mcp__context7",
+      "mcp__ace-tool",
+      "mcp__grok-search__*",
+      "Bash(node:*)",
+      "Bash(pnpm:*)",
+      "Bash(nvm use:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(git:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(mkdir:*)",
+      "Bash(echo:*)",
+      "Bash(cd:*)",
+      "Bash(cp:*)",
+      "Bash(go version:*)",
+      "Bash(openspec:*)",
+      "Bash(gh api *)",
+      "Bash(python:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(git clean:*)",
+      "Bash(git rebase:*)",
+      "Bash(git restore:*)",
+      "Bash(git filter-branch:*)",
+      "Bash(pip:*)"
+    ]
+  },
+  "enabledMcpjsonServers": ["exa", "deepwiki", "codex", "gemini", "context7", "ace-tool", "grok-search"]
+}
